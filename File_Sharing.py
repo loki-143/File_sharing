@@ -34,13 +34,13 @@ def Send():
         print("Data has been sent successfully")
 
     #icon
-    image_icon1=PhotoImage(file="Images/send.png")
+    image_icon1=PhotoImage(file="send.png")
     window.iconphoto(False,image_icon1)
 
-    Sbackground=PhotoImage(file="Images/sender.png")
+    Sbackground=PhotoImage(file="sender.png")
     Label(window,image=Sbackground).place(x=-2,y=0)
 
-    Mbackground=PhotoImage(file="Images/id.png")
+    Mbackground=PhotoImage(file="id.png")
     Label(window,image=Mbackground,bg="#f4fdfe").place(x=100,y=260)
     host=socket.gethostname()
     Label(window,text=f'ID: {host}',bg='white',fg='black').place(x=140,y=290)
@@ -72,13 +72,13 @@ def Receive():
         print("Data has been received successfully")
 
     #icon
-    image_icon1=PhotoImage(file="Images/receive.png")
+    image_icon1=PhotoImage(file="receive.png")
     main.iconphoto(False,image_icon1)
 
-    Hbackground=PhotoImage(file="Images/receiver.png")
+    Hbackground=PhotoImage(file="receiver.png")
     Label(main,image=Hbackground).place(x=-2,y=0)
 
-    logo=PhotoImage(file="Images/profile.png")
+    logo=PhotoImage(file="profile.png")
     Label(main,image=logo,bg="#f4fdfe").place(x=10,y=250)
 
     Label(main,text="Receive",font=('arial', 20,),bg="#f4fdfe").place(x=100,y=280)
@@ -92,7 +92,7 @@ def Receive():
     incoming_file=Entry(main,width=25,fg="black",border=2,bg='white',font=('arail',15))
     incoming_file.place(x=20,y=450)
 
-    imageicon=PhotoImage(file="Images/arrow.png")
+    imageicon=PhotoImage(file="arrow.png")
     rr=Button(main,text="Receive",compound=LEFT,image=imageicon,width=130,bg="#39c790",font="arial 14 bold",command=receiver)
     rr.place(x=20,y=500)
 
@@ -101,17 +101,17 @@ def Receive():
     main.mainloop()
 
 #icon
-image_icon=PhotoImage(file="Images/icon.png" )
+image_icon=PhotoImage(file="icon.png" )
 root.iconphoto(False,image_icon)
 Label(root,text="File Transfer",font=('Acumin Variable Concept', 20, 'bold'),bg="#f4fdfe").place(x=20,y=30)
 
 Frame(root,width=400,height=2,bg="#f3f5f6").place(x=25,y=80)
 
-send_image=PhotoImage(file="Images/send.png")
+send_image=PhotoImage(file="send.png")
 send=Button(root,image=send_image,bg="#f4fdfe",bd=0,command=Send)
 send.place(x=50,y=100)
 
-receive_image=PhotoImage(file="Images/receive.png")
+receive_image=PhotoImage(file="receive.png")
 receive=Button(root,image=receive_image,bg="#f4fdfe",bd=0,command=Receive)
 receive.place(x=300,y=100)
 
@@ -120,7 +120,7 @@ receive.place(x=300,y=100)
 Label(root,text="Send",font=('Acumin Variable Concept', 17, 'bold'),bg="#f4fdfe").place(x=65,y=200)
 Label(root,text="Recieve",font=('Acumin Variable Concept', 17, 'bold'),bg="#f4fdfe").place(x=300,y=200)
 
-background=PhotoImage(file="Images/background.png")
+background=PhotoImage(file="background.png")
 Label(root,image=background).place(x=-2,y=323)
 
 
